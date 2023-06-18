@@ -3,8 +3,19 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `diesi-test`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Gatsby website for diesi`,
+    siteUrl: `https://www.myDomain.gr`,
+    description: `My first site description`,
   },
-  plugins: [],
-}
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
+      },
+    },
+  ],
+};
